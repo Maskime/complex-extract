@@ -1,0 +1,4 @@
+version: '3'
+services:
+  run_env_python:
+    image: python:3.6-alpine
