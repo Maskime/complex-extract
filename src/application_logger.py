@@ -2,9 +2,10 @@ import logging
 import os
 from logging.handlers import RotatingFileHandler
 
-file_path = os.path.realpath(__file__)
-app_path = os.path.join(file_path, '..')
+file_path = os.path.dirname(__file__)
+app_path = os.path.abspath(os.path.join(file_path, os.pardir))
 logs_path = os.path.join(app_path, 'logs')
+print(file_path, app_path, logs_path)
 
 default_format = '%(asctime)s :: %(levelname)s :: %(message)s'
 root_level = logging.DEBUG
